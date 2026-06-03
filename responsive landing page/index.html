@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NovaX Landing Page</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI', sans-serif;
+}
+
+body{
+  background:#0b1220;
+  color:white;
+  line-height:1.6;
+}
+
+/* NAVBAR */
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 30px;
+  background:rgba(255,255,255,0.06);
+  backdrop-filter: blur(10px);
+  z-index:1000;
+}
+
+nav h2{
+  color:#38bdf8;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  margin-left:15px;
+  font-size:14px;
+}
+
+/* HERO */
+.hero{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:120px 20px 60px;
+  background: linear-gradient(-45deg,#4f46e5,#06b6d4,#9333ea,#22c55e);
+  background-size:400% 400%;
+  animation: gradient 8s ease infinite;
+}
+
+@keyframes gradient{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+.hero h1{
+  font-size:48px;
+  max-width:700px;
+}
+
+.hero p{
+  margin-top:15px;
+  max-width:600px;
+  opacity:0.9;
+}
+
+.hero button{
+  margin-top:25px;
+  padding:12px 28px;
+  border:none;
+  border-radius:30px;
+  background:white;
+  color:#0b1220;
+  font-weight:bold;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.hero button:hover{
+  transform:scale(1.1);
+}
+
+/* FEATURES */
+.features{
+  padding:70px 20px;
+  text-align:center;
+  background:#0b1220;
+}
+
+.features h2{
+  font-size:32px;
+  margin-bottom:40px;
+  color:#38bdf8;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+  max-width:1000px;
+  margin:auto;
+}
+
+.card{
+  background:rgba(255,255,255,0.05);
+  padding:25px;
+  border-radius:15px;
+  border:1px solid rgba(255,255,255,0.1);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+  border-color:#38bdf8;
+  box-shadow:0 10px 25px rgba(56,189,248,0.2);
+}
+
+.card h3{
+  color:#38bdf8;
+  margin-bottom:10px;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:20px;
+  background:#050914;
+  font-size:13px;
+}
+
+/* MOBILE */
+@media(max-width:600px){
+  .hero h1{
+    font-size:32px;
+  }
+
+  nav{
+    padding:15px 20px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <h2>NovaX</h2>
+  <div>
+    <a href="#">Home</a>
+    <a href="#">Features</a>
+    <a href="#">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero">
+  <h1>Build Smart Digital Experiences</h1>
+  <p>Modern, fast and scalable solutions designed for the future of web development.</p>
+  <button>Get Started</button>
+</section>
+
+<!-- FEATURES -->
+<section class="features">
+  <h2>Why Choose Us</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>⚡ Fast</h3>
+      <p>Lightning fast performance for smooth experience.</p>
+    </div>
+
+    <div class="card">
+      <h3>🔒 Secure</h3>
+      <p>High-level security to protect your data.</p>
+    </div>
+
+    <div class="card">
+      <h3>🎯 Simple</h3>
+      <p>Clean UI designed for easy use.</p>
+    </div>
+
+    <div class="card">
+      <h3>🚀 Scalable</h3>
+      <p>Grows with your business needs.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  © 2026 NovaX Landing Page | Internship Task Submission
+</footer>
+
+</body>
+</html>
